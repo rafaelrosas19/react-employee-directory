@@ -4,9 +4,9 @@ body {
 }
 
 .navbar {
-  background-color: #000;
-  border-bottom: 5px solid red;
-  border-top: 5px solid red;
+  background-color: #3282e0;
+  border-bottom: 5px solid #ffa126 ;
+  margin-bottom: 3vh;
 }
 
 .navemp {
@@ -22,4 +22,9 @@ body {
   font-size: 1.5vh;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
+}
+.user-area {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
 }
