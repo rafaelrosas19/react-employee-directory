@@ -10,7 +10,7 @@ body {
 }
 
 .navemp {
-  font-size: 5vh;
+  font-size: 4vh;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -19,7 +19,7 @@ body {
   color: white;
 }
 .navsub {
-  font-size: 2vh;
+  font-size: 1.5vh;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
 }

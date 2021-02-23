@@ -1,4 +1,5 @@
 import React from "react";
+import SearchBox from "./SearchBox";
 
 function Nav() {
   return (
@@ -12,6 +13,7 @@ function Nav() {
             narrow your results.
           </span>
         </a>
+        <SearchBox />
       </div>
     </nav>
   );
