@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchBox() {
+function SearchBox({ handleClick }) {
   return (
     <div className="searchbox">
       <form className="form-inline">
@@ -11,6 +11,13 @@ function SearchBox() {
           aria-label="Search"
           onChange=""
         />
+        <button
+          type="button"
+          className="btn btn-light search-button"
+          onClick={handleClick}
+        >
+          search
+        </button>
       </form>
     </div>
   );

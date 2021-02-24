@@ -28,3 +28,7 @@ body {
   border-style: solid;
   border-color: black;
 }
+
+.search-button{
+  margin-left: 5px;
+}

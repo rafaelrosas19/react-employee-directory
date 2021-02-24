@@ -1,19 +1,19 @@
 import React from "react";
 import SearchBox from "./SearchBox";
 
-function Nav() {
+function Nav({ handleClick }) {
   return (
-    <nav class="navbar">
-      <div class="container d-flex justify-content-center">
-        <a class="navbar-brand ms-auto fas fa-users" href="#">
-          <span class="navemp"> Employee Directory </span>
+    <nav className="navbar">
+      <div className="container d-flex justify-content-center">
+        <a className="navbar-brand ms-auto fas fa-users" href="#">
+          <span className="navemp"> Employee Directory </span>
           <br></br>
-          <span class="navsub">
+          <span className="navsub">
             Click on carrots to filter by heading or use the search box to
             narrow your results.
           </span>
         </a>
-        <SearchBox />
+        <SearchBox handleClick={handleClick} />
       </div>
     </nav>
   );
