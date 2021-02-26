@@ -9,7 +9,6 @@ function SearchBox({ handleClick }) {
           type="search"
           placeholder="Search"
           aria-label="Search"
-          onChange=""
         />
         <button
           type="button"

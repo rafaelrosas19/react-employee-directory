@@ -1,17 +1,16 @@
 import "./App.css";
 import React from "react";
 import Nav from "./components/Nav";
+import axios from "axios";
 
 function App() {
-  const handleClick = async (event) => {
+  const handleClick = (event) => {
     event.preventDefault();
-    try {
-      const response = await fetch("https://randomuser.me/api/");
-      const userList = await response.json();
-      console.log("userList", userList);
-    } catch (err) {
-      console.log("error: ", err);
-    }
+
+    axios.get("https://randomuser.me/api/?results=200").then((res) => {
+      const [...users] = res.data.results;
+      console.log(users);
+    });
   };
 
   return (
