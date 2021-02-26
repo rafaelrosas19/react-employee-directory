@@ -1,14 +1,18 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import Nav from "./components/Nav";
 import axios from "axios";
 
 function App() {
+  const [users, setUsers] = useState([{}]);
+
   const handleClick = (event) => {
     event.preventDefault();
 
     axios.get("https://randomuser.me/api/?results=200").then((res) => {
-      const [...users] = res.data.results;
+      const data = res.data.results;
+      setUsers([ ...data ]);
+      console.log(data);
       console.log(users);
     });
   };
