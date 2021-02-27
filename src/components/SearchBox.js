@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchBox({ handleClick }) {
   return (
-    <div className="searchbox">
+    <div className="searchbox d-flex justify-content-center">
       <form className="form-inline">
         <input
           className="form-control"

@@ -5,7 +5,7 @@ body {
 
 .navbar {
   background-color: #3282e0;
-  border-bottom: 5px solid #ffa126 ;
+  border-bottom: 5px solid #ffa126;
   margin-bottom: 3vh;
 }
 
@@ -29,6 +29,10 @@ body {
   border-color: black;
 }
 
-.search-button{
+.search-button {
   margin-left: 5px;
+}
+
+.searchbox {
+  margin-bottom: 3vh;
 }
