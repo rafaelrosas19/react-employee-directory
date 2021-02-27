@@ -23,8 +23,10 @@ function App() {
   };
 
   console.log("users", users);
+  
   const userList = users.map((user) => (
-    <p key={user.login.uuid}>{user.name.first}</p>
+    <p key={user.login.uuid}>{user.name.first} {user.name.last}</p>
+    
   ));
 
   return (
