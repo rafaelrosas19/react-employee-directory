@@ -5,7 +5,7 @@ function Nav({ handleClick }) {
   return (
     <nav className="navbar">
       <div className="container d-flex justify-content-center">
-        <a className="navbar-brand ms-auto fas fa-users" href="#">
+        <a className="navbar-brand ms-auto fas fa-users" href="./">
           <span className="navemp"> Employee Directory </span>
           <br></br>
           <span className="navsub">
