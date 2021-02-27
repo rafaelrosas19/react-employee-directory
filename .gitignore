@@ -1,10 +1,12 @@
 .gitignore
+package-lock.json
+
 
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
-package-lock.json
+/package-lock.json
 
 # testing
 /coverage
