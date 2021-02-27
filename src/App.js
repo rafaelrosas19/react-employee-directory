@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import Nav from "./components/Nav";
+import UserTable from "./components/UserTable";
 import axios from "axios";
 
 function App() {
@@ -22,20 +23,18 @@ function App() {
     });
   };
 
-  console.log("users", users);
-  
-  const userList = users.map((user) => (
-    <p key={user.login.uuid}>{user.name.first} {user.name.last}</p>
-    
-  ));
+  // console.log("users", users);
+
+  // const userList = users.map((user) => (
+  //   <p key={user.login.uuid}>
+  //     {user.name.first} {user.name.last}
+  //   </p>
+  // ));
 
   return (
     <div className="App">
       <Nav handleClick={handleClick} />
-      <div className="user-area d-flex justify-content-center">
-        This is where all of the information from the api call will show
-      </div>
-      {userList}
+      <UserTable users={users} />
     </div>
   );
 }
