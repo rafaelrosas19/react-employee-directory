@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchBox({ handleClick }) {
+function SearchBox({ handleSearchChange }) {
   return (
     <div className="searchbox d-flex justify-content-center">
       <form className="form-inline">
@@ -9,14 +9,8 @@ function SearchBox({ handleClick }) {
           type="search"
           placeholder="Search"
           aria-label="Search"
+          onChange={handleSearchChange}
         />
-        <button
-          type="button"
-          className="btn btn-light search-button"
-          onClick={handleClick}
-        >
-          search
-        </button>
       </form>
     </div>
   );

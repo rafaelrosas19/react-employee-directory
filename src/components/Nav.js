@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBox from "./SearchBox";
 
-function Nav({ handleClick }) {
+function Nav({ handleSearchChange }) {
   return (
     <>
       <nav className="navbar">
@@ -16,7 +16,7 @@ function Nav({ handleClick }) {
           </div>
         </div>
       </nav>
-      <SearchBox handleClick={handleClick} />
+      <SearchBox handleSearchChange={handleSearchChange} />
     </>
   );
 }

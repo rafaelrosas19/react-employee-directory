@@ -14,8 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BasicTable({ users }) {
-  console.log(users);
+export default function BasicTable({ users, filteredUsers }) {
   const classes = useStyles();
   const formatDate = (date) => {
     const dateArray = date.split("-");
@@ -29,44 +28,48 @@ export default function BasicTable({ users }) {
 
   return (
     <div className="container">
-      <TableContainer component={Paper}>
-        <Table className={classes.table} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell>Image</TableCell>
-              <TableCell align="right">Name</TableCell>
-              <TableCell align="right">Date of Birth</TableCell>
-              <TableCell align="right">Email</TableCell>
-              <TableCell align="right">Phone Number</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {users.map((user, index) => (
-              <TableRow key={user.login.uuid}>
-                <TableCell component="th" scope="row">
-                  <img src={user.picture.thumbnail} alt="employee portrait" />
-                </TableCell>
-                <TableCell align="right">
-                  <p>
-                    {user.name.first} {user.name.last}
-                  </p>
-                </TableCell>
-                <TableCell align="right">
-                  <p>{formatDate(user.registered.date)}</p>
-                </TableCell>
-                <TableCell align="right">
-                  <p>
-                    <a href={"mailto:" + user.email}>{user.email}</a>
-                  </p>
-                </TableCell>
-                <TableCell align="right">
-                  <p>{user.phone}</p>
-                </TableCell>
+      {users[0] !== undefined && users[0].name !== undefined ? (
+        <TableContainer component={Paper}>
+          <Table className={classes.table} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Image</TableCell>
+                <TableCell align="right">Name</TableCell>
+                <TableCell align="right">Date of Birth</TableCell>
+                <TableCell align="right">Email</TableCell>
+                <TableCell align="right">Phone Number</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {users.map((user, index) => (
+                <TableRow key={user.login.uuid}>
+                  <TableCell component="th" scope="row">
+                    <img src={user.picture.thumbnail} alt="employee portrait" />
+                  </TableCell>
+                  <TableCell align="right">
+                    <p>
+                      {user.name.first} {user.name.last}
+                    </p>
+                  </TableCell>
+                  <TableCell align="right">
+                    <p>{formatDate(user.registered.date)}</p>
+                  </TableCell>
+                  <TableCell align="right">
+                    <p>
+                      <a href={"mailto:" + user.email}>{user.email}</a>
+                    </p>
+                  </TableCell>
+                  <TableCell align="right">
+                    <p>{user.phone}</p>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
