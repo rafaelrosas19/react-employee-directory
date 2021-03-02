@@ -34,7 +34,14 @@ export default function BasicTable({ users, handleSort }) {
             <TableHead>
               <TableRow>
                 <TableCell>Image</TableCell>
-                <TableCell align="right">Name</TableCell>
+                <TableCell
+                  align="right"
+                  onClick={() => {
+                    handleSort(users.name);
+                  }}
+                >
+                  Name
+                </TableCell>
                 <TableCell align="right">Date of Birth</TableCell>
                 <TableCell align="right">Email</TableCell>
                 <TableCell align="right">Phone Number</TableCell>

@@ -17,50 +17,44 @@ function App() {
     });
   }, []);
 
-  const handleSort = (heading) => {
+  const handleSort = (name) => {
     if (order === "descend") {
       setOrder("ascend");
-      // this.setState({
-      //   order: "ascend",
-      // });
     } else {
-      // this.setState({
-      //   order: "descend",
-      // });
       setOrder("descend");
     }
 
     const compareFnc = (a, b) => {
       if (order === "ascend") {
         // account for missing values
-        if (a[heading] === undefined) {
+        if (a[name] === undefined) {
           return 1;
-        } else if (b[heading] === undefined) {
+        } else if (b[name] === undefined) {
           return -1;
         }
+
         // numerically
-        else if (heading === "name") {
-          return a[heading].first.localeCompare(b[heading].first);
+        else if (name === "name") {
+          return a[name].first.localeCompare(b[name].first);
         } else {
-          return a[heading] - b[heading];
+          return a[name] - b[name];
         }
       } else {
         // account for missing values
-        if (a[heading] === undefined) {
+        if (a[name] === undefined) {
           return 1;
-        } else if (b[heading] === undefined) {
+        } else if (b[name] === undefined) {
           return -1;
         }
         // numerically
-        else if (heading === "name") {
-          return b[heading].first.localeCompare(a[heading].first);
+        else if (name === "name") {
+          return b[name].first.localeCompare(a[name].first);
         } else {
-          return b[heading] - a[heading];
+          return b[name] - a[name];
         }
       }
     };
     const sortedUsers = filteredUsers.sort(compareFnc);
-    // this.setState({ filteredUsers: sortedUsers });
     setFilteredUsers([...sortedUsers]);
   };
 
