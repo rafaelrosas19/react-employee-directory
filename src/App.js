@@ -10,7 +10,7 @@ function App() {
   const [order, setOrder] = useState("descend");
 
   useEffect(() => {
-    axios.get("https://randomuser.me/api/?results=10&nat=us").then((res) => {
+    axios.get("https://randomuser.me/api/?results=50&nat=us").then((res) => {
       const data = res.data.results;
       setUsers([...data]);
       setFilteredUsers([...data]);
