@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BasicTable({ users, filteredUsers }) {
+export default function BasicTable({ users, handleSort }) {
   const classes = useStyles();
   const formatDate = (date) => {
     const dateArray = date.split("-");
@@ -68,7 +68,7 @@ export default function BasicTable({ users, filteredUsers }) {
           </Table>
         </TableContainer>
       ) : (
-        <></>
+        <>Please try another user.</>
       )}
     </div>
   );
