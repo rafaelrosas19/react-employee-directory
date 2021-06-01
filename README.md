@@ -2,9 +2,9 @@
 
 ## Description
 
-https://rafaelrosas19.github.io/react-employee-directory/
-
 The purpose of this application is to allow a manager or employee the ability to view an employee directory so they can quickly access a colleague's contact information without having to scroll through a series of many pages.  
+
+https://rafaelrosas19.github.io/react-employee-directory/
 
 ![](public/dir.gif)
 
